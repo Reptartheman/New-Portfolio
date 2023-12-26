@@ -1,13 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
+ @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 :root {
-  --font-main: "Inter", sans-serif;
-  --font-main-bold: "Inter-Bold", Helvetica;
+  --font-main: "Acme", sans-serif;
+  --font-main-bold: "Acme", sans-serif;
   --font-h4: "Inter", sans-serif;
   --color-one: #677788;
   --color-two: #2476ff;
   --color-three: #ffffff;
-  --black: #000000;
+  --black: #1a1616;
+  --sea-green: #00B9AE;
+  --ship-gray: #7B8E8D;
+  --current: #235959;;
+  --dark-green: #03312E;
+  --emerald: #02C278;
 
   --input-border: 1px solid #e6e8f2;
 
@@ -26,6 +30,7 @@
   --size-70: 4.375rem;
   --size-80: 5rem;
   --size-100: 6.25rem;
+  --size-110: 6.875rem;
   --size-120: 7.5rem;
   --size-150: 9.375rem;
 }
@@ -35,6 +40,8 @@ html {
 }
 
 body {
+  background-image: url("./assets/website\ background.png");
+  background-size: contain;
   margin: 0;
   padding: 0;
 }
@@ -60,13 +67,20 @@ p {
   font-size: var(--size-16);
   line-height: var(--size-24);
   font-family: var(--font-main);
-  color: var(--color-one);
+  color: #f2f1f4;
   letter-spacing: 0;
+}
+
+h1 {
+  font-family: var(--font-main);
+    font-size: 2.6vw;
+    margin: 0;
+    color: #f6f5fae6;
 }
 
 h2 {
   margin: 0;
-  color: var(--black);
+  color: #f2f1f4;
   font-family: var(--font-main-bold);
   font-size: var(--size-26);
   font-weight: 700;
@@ -97,6 +111,10 @@ img {
   border-style: none;
 }
 
+.mt-70 {
+  margin-top: var(--size-70);
+}
+
 .gap-10 {
   gap: var(--size-10);
 }
@@ -118,6 +136,9 @@ img {
   align-items: center;
 }
 
+.section-background {
+  background-color: rgba(35, 89, 89, 0.9);
+}
 
 .btn {
   display: inline-block;
