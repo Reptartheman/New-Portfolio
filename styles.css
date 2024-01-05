@@ -207,8 +207,6 @@
   display: flex;
 }
 
-.skills-item img {
-}
 
 .skills-item h3 {
   height: var(--size-24);
