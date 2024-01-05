@@ -1,9 +1,18 @@
+
 let navbarList = document.getElementById('navbarList');
 let windowWidth = window.innerWidth;
 let hamburgerMenu = document.querySelector('.hamburger');
 const navButton = document.querySelector('button[aria-expanded]');
 const nav = document.getElementById("topNav");
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// init AOS animation
+AOS.init({
+    duration: 1000,
+    offset: 100,
+});
 
 window.onscroll = function() {
   if (window.scrollY > 100) {

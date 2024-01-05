@@ -16,8 +16,8 @@
     />
   </head>
   <body>
-    <div class="top-section section-container">
-      <header class="page-header" id="topNav">
+    <div class="top-section section-container" id="home">
+      <header class="page-header" id="topNav" data-aos="fade-down">
         <div class="logo-container">
           <img src="./assets/tape.svg" alt="Front logo" />
         </div>
@@ -31,18 +31,18 @@
             <span class="hamburger">&#9776;</span>
           </button>
           <div class="nav-container">
-            <ul class="navbar-nav" id="navbarList">
-              <li class="nav-link"><a href="#">Home</a></li>
-              <li class="nav-link"><a href="#">About</a></li>
-              <li class="nav-link"><a href="#">Portfolio</a></li>
-              <li class="nav-link"><a href="#">Get in touch</a></li>
+            <ul class="navbar-nav blur" id="navbarList">
+              <li class="nav-link"><a href="#home">Home</a></li>
+              <li class="nav-link"><a href="#skills">Skills</a></li>
+              <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+              <li class="nav-link"><a href="#GetInTouch">Get in touch</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
       <section class="hero-section gap-10">
-        <div class="left-side">
+        <div class="left-side blur">
           <div class="left-side-header gap-10">
             <h1>Jeff Moro</h1>
             <p>
@@ -55,20 +55,19 @@
         </div>
 
         <div class="right-side">
-          <img src="./assets/IMG_9240.JPG" alt="Jeff" />
+          <img class="blur" src="./assets/IMG_9222.JPG" alt="Jeff"/>
         </div>
       </section>
     </div>
 
-    <section class="skills section-container section-background">
+    <section class="skills section-container section-background from-back" data-aos="fade-down" id="skills">
       <div class="skills-title flex-align-center gap-10">
         <h1>Skills & Certs</h1>
         <p>
-          With an ever expanding array of skills, Jeff has what you're looking
-          for
+          With an ever expanding array of skills, Jeff has the ability to make your vision come to life.
         </p>
       </div>
-      <div class="skills-container">
+      <div class="skills-container blur">
         <div class="certs-list">
           <div class="uconn certs-item">
             <img
@@ -88,7 +87,7 @@
             <img src="./assets/Mimo JS Cert.jpg" alt="responsive" />
           </div>
         </div>
-        <div class="skills-right">
+        <div class="skills-right blur">
             <div class="bubble-small css">
               <img class="css" src="./assets/file-type-css.svg" />
             </div>
@@ -115,7 +114,7 @@
     </section>
 
 
-    <section class="portfolio section-container section-background">
+    <section class="portfolio section-container section-background from-back" data-aos="fade-down" id="portfolio">
       <div class="portfolio-content">
         <div class="portfolio-title flex-align-center gap-10">
           <h1>Portfolio</h1>
@@ -123,19 +122,21 @@
         </div>
 
         <div class="portfolio-info flex-align-center">
-          <a href="https://retro-nome.vercel.app/">
+          
           <div class="featured-card">
+            <a href="https://retro-nome.vercel.app/" target="_blank">
             <h1>Featured</h1>
            
             <h2>RetroNome</h2> 
             <p>A simple metronome for musicians to practice with.</p>
             <img src="./assets/RetroNome.png" alt="RetroNome">
+          </a>
           </div>
-        </a>
+        
           <div class="portfolio-grid gap-10">
             
-            <div class="portfolio-grid-item flex-align-start">
-              <a href="https://emmasbbq.lpages.co/">
+            <div class="portfolio-grid-item">
+              <a href="https://www.emmas-bbq.com/" target="_blank">
               <div class="grid-item-content">
                 <h2>Emma's BBQ </h2>
                 <img src="./assets/EmmasMAIN.png" alt="Emma's BBQ" />
@@ -144,309 +145,51 @@
             </div>
           
             <div class="portfolio-grid-item">
-              <a href="https://saas-landing-page-blond.vercel.app/">
+              <a href="https://saas-landing-page-omega.vercel.app/" target="_blank">
               <div class="grid-item-content">
                 <h2>Saas Landing Page</h2>
-                <img src="./assets/logo.svg" alt="logo" />
+                <img src="./assets/Front.png" alt="logo" />
               </div>
             </a>
             </div>
 
-            <div class="portfolio-grid-item flex-align-start">
+            <div class="portfolio-grid-item">
+              <a href="https://code-rad-bice.vercel.app/" target="_blank">
               <div class="grid-item-content">
-                <img src="./assets/icons/cancel.svg" alt="cancel" />
-                <h3>
-                  Cancel anytime <span class="gap-10" id="sketch">sketch</span>
-                </h3>
-                <p>If its not for you, just cancel, no hidden costs or fees.</p>
+                <h2>Code Rad</h2>
+                <img src="./assets/coderad.png" alt="logo" />
               </div>
+            </a>
             </div>
 
-            <div class="portfolio-grid-item flex-align-start">
+            <div class="portfolio-grid-item">
+              <a href="https://feed-your-head-delta.vercel.app/" target="_blank">
               <div class="grid-item-content">
-                <img src="./assets/icons/moneyback.svg" alt="money back" />
-                <h3>Money back</h3>
-                <p>100% guaranteed money back. No questions asked.</p>
+                <h2>Feed Your Head</h2>
+                <img src="./assets/FEED YOUR HEAD2 1.svg" alt="logo" />
               </div>
+            </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="hire-us hire-us-background section-container">
-      <div class="hire-us-content">
-        <div class="hire-us-left-container">
-          <div class="hire-us-left">
-            <h1 class="gap-10">Hire Us</h1>
-            <p>Whatever your goal - we will get you there</p>
-            <hr />
-            <p>
-              "I love Front! I love the ease of use, I love the fact that I have
-              total creative freedom..."
-            </p>
-          </div>
-          <div class="hire-us-btm flex-align-start">
-            <h2>Charlotte Moore</h2>
-            <p>Head of Commercials, Slack</p>
 
-            <div class="btm-images flex-align-start">
-              <img src="./assets/people/woman_two.jpg" alt="woman_two" />
-              <img src="./assets/people/woman_one.jpg" alt="woman_one" />
-              <img src="./assets/people/man_one.jpg" alt="man_one" />
-            </div>
-          </div>
-        </div>
-
-        <div class="hire-us-right">
-          <form class="form flex-align-center">
-            <h2>
-              Fill out the form, and we'll be in touch as soon as possible
-            </h2>
-
-            <div class="form-group flex-align-start">
-              <label for="first-name"></label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                value="First name"
-              />
-
-              <label for="last-name"></label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                value="Last name"
-              />
-            </div>
-            <div class="form-group flex-align-start">
-              <label for="work-email"></label>
-              <input
-                type="text"
-                id="work-email"
-                name="work-email"
-                value="Work email"
-              />
-
-              <label for="company-website"></label>
-              <input
-                type="text"
-                id="company-website"
-                name="company-website"
-                value="Company Website"
-              />
-            </div>
-            <div class="form-group flex-align-start">
-              <label for="budget"></label>
-              <select class="select-field" id="budget" name="budget">
-                <option value="Budget">Budget</option>
-                <option value="30000">30000</option>
-                <option value="35000">35000</option>
-                <option value="40000">40000</option>
-                <option value="45000">45000</option>
-                <option value="50000">50000</option>
-                <option value="55000">55000</option>
-                <option value="60000">60000</option>
-                <option value="65000">65000</option>
-                <option value="70000">70000</option>
-              </select>
-
-              <label for="country"></label>
-              <select class="select-field" id="country" name="country">
-                <option value="Country">Country</option>
-                <option value="AI">Anguilla</option>
-                <option value="AG">Antigua and Barbuda</option>
-                <option value="AW">Aruba</option>
-                <option value="BS">Bahamas</option>
-                <option value="BB">Barbados</option>
-                <option value="BZ">Belize</option>
-                <option value="BM">Bermuda</option>
-              </select>
-            </div>
-            <div class="form-group flex-align-start">
-              <textarea
-                class="flex-align-start"
-                id="project-details"
-                name="project-details"
-                cols="50"
-                rows="10"
-                placeholder="Tell us more about your project, needs, and timeline."
-              ></textarea>
-            </div>
-
-            <div class="privacy-policy">
-              <input
-                type="checkbox"
-                name="privacy-policy"
-                id="privacyPolicy"
-                class="checkbox"
-              />
-              <label for="privacyPolicy" class="subtext">
-                Yes, I'd like to receive occasional marketing emails from Front.
-                I have the right to opt out at any time.
-                <a href="#">View privacy policy.</a>
-              </label>
-            </div>
-            <div class="submit-area">
-              <input
-                class="btn btn-primary"
-                type="button"
-                value="Get Started"
-              />
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer section-container">
-      <div class="footer-top-container">
-        <div class="footer-menu-item contact-box">
-          <a href="#">
-            <img
-              src="./assets/project_logo/logo.svg"
-              alt="front logo"
-              class="logo"
-            />
-          </a>
-          <ul class="bottom-list">
-            <li>
-              <i class="fa-solid fa-location-arrow"></i>
-              <a href="#" class="address-phone"
-                >153 Williamson Plaza, Maggieberg</a
-              >
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <a href="#" class="address-phone">+1 (062) 109-9222</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-menu-list-grid">
-          <div class="footer-menu-item company">
-            <h3>Company</h3>
-            <ul class="footer-menu-list">
-              <li>
-                <a href="#" class="menu-list-item">About</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Careers</a>
-                <span>We're hiring</span>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Blog</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Customers</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Hire us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="features footer-menu-item features">
-            <h3>Features</h3>
-            <ul class="footer-menu-list">
-              <li>
-                <a href="#" class="menu-list-item">Press</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Release Notes</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Integrations</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">portfolio</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-docs footer-menu-item docs">
-            <h3>Documentation</h3>
-            <ul class="footer-menu-list">
-              <li>
-                <a href="#" class="menu-list-item">Support</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Docs</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Status</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">API Reference</a>
-              </li>
-              <li>
-                <a href="#" class="menu-list-item">Tech Requirements</a>
-              </li>
-            </ul>
-          </div>
-          <div class="resources footer-menu-item resources">
-            <h3>Resources</h3>
-            <ul class="footer-menu-list">
-              <li>
-                <i class="fa-solid fa-circle-info"></i>
-                <a href="#" class="menu-list-item">Help</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-user"></i>
-                <a href="#" class="menu-list-item">Your Account</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-btm">
-        <ul class="footer-btm-breadcrumb">
-          <li>
-            <a href=""> Privacy & Policy > </a>
-          </li>
-          <li>
-            <a href=""> Terms > </a>
-          </li>
-          <li>
-            <a href=""> Site Map ></a>
-          </li>
-        </ul>
-
-        <div class="footer-socials">
-          <a class="social-item flex-align-center" href="">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-          <a class="social-item flex-align-center" href="">
-            <i class="fab fa-google"></i>
-          </a>
-
-          <a class="social-item flex-align-center" href="">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a class="social-item flex-align-center" href="">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <select class="country-dropdown" name="" id="">
-            <option value="">🇺🇸&emsp;United States</option>
-            <option value="">🇬🇧&emsp;United Kingdom</option>
-            <option value="">🇦🇹&emsp;Austria</option>
-          </select>
-        </div>
-
-        <div class="footer-copyright">
-          <p>&copy; Front. 2022 Responsive designs. All rights reserved.</p>
-          <p>
-            When you visit or interact with our sites, services or tools, we or
-            our authorised service providers may use cookies for storing
-            information to help provide you with a better, faster and safer
-            experience and for marketing purposes.
-          </p>
-        </div>
-      </div>
+    <footer class="footer section-container" id="GetInTouch">
+      <div class="footer-content">
+      <p>This page was built by Jeff Moro</p>
+      <div class="footer-img-container">
+      <a href="https://www.linkedin.com/in/jeffmoro/" target="_blank">
+        <img src="./assets/linkedin-original.svg" alt="LinkendIn">
+      </a>
+      <a href="https://github.com/Reptartheman" target="_blank">
+        <img src="./assets/github (1).svg" alt="GitHub">
+      </a>
+    </div>
+    </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
