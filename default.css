@@ -41,7 +41,8 @@ html {
 
 body {
   background-image: url("./assets/websitebackground.png");
-  background-size: contain;
+  background-size:auto;
+  background-repeat:inherit;
   margin: 0;
   padding: 0;
 }
@@ -66,7 +67,7 @@ a {
 
 p {
   margin-top: 0;
-  font-size: var(--size-16);
+  font-size: var(--size-20);
   line-height: var(--size-24);
   font-family: var(--font-main);
   color: #f2f1f4;
