@@ -205,42 +205,53 @@
         <div class="form">
           <div class="form-container">
             <h3>Fill out the form and we'll be in touch as soon as possible</h3>
-            <form action="https://formspree.io/f/xkndgbna" method="POST">
+            <form onsubmit="sendEmail(); reset(); return false">
               <label for="firstName">Full Name</label>
               <input
+                id="fullName"
                 class="input-field"
                 name="firstName"
-                id="firstName"
                 type="text"
                 placeholder="Full name"
                 required
               />
               <label for="workEmail">Your Email</label>
               <input
+                id="email"
                 class="input-field"
                 name="workEmail"
-                id="workEmail"
                 type="text"
                 placeholder="Your Email"
                 required
               />
               <label for="tellMeMore">Tell me more</label>
               <textarea
+                id="textArea"
                 name="tellUsMore"
-                id="tellUsMore"
-                cols="30"
-                rows="10"
                 placeholder="Tell me more about your project, needs, and timeline."
               ></textarea>
               <div class="submit-area">
-                <input class="button" type="button" value="Send" />
+                <input id="formBtn" class="button" type="submit" value="Send" />
               </div>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "jeffmoromusic@gmail.com",
+          Password: "89116CA3D9F538C7690BD8333E66AF2DBEF3",
+          To: "jeffmoromusic@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "Project inquiry",
+          Body: document.getElementById("textArea").value,
+        }).then((message) => alert("Message sent! I'll be in touch soon."));
+      }
+    </script>
     <script src="script.js" type="module"></script>
   </body>
 </html>
