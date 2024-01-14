@@ -409,7 +409,12 @@
   justify-self: center;
   grid-column: 2/ span 1;
   display: grid;
-  grid-template-areas: "img-container" "form";
+  grid-template-areas:"form" "img-container" ;
+  gap: var(--size-16);
+}
+
+.footer-content p {
+  text-align: center;
 }
 
 .footer-img-container {
@@ -425,8 +430,9 @@
 }
 
 .form {
+  grid-area: form;
   background-color: #FFFFFF;
-  padding: 30px;
+  padding: var(--size-30);
   border-radius: 5px;
 }
 .form label {
@@ -447,6 +453,11 @@
   border: 1px solid #E6E8F2;
   border-radius: 3px;
 }
+
+.form-container > h3 {
+  margin-bottom: var(--size-20);
+}
+
 .form-container > form textarea {
   grid-column: span 2;
   padding: 10px;

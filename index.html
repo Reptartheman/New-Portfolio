@@ -193,15 +193,6 @@
 
     <footer class="footer section-container" id="GetInTouch">
       <div class="footer-content">
-        <p>This page was built by Jeff Moro</p>
-        <div class="footer-img-container">
-          <a href="https://www.linkedin.com/in/jeffmoro/" target="_blank">
-            <img src="./assets/linkedin-original.svg" alt="LinkendIn" />
-          </a>
-          <a href="https://github.com/Reptartheman" target="_blank">
-            <img src="./assets/github (1).svg" alt="GitHub" />
-          </a>
-        </div>
         <div class="form">
           <div class="form-container">
             <h3>Fill out the form and we'll be in touch as soon as possible</h3>
@@ -229,6 +220,7 @@
                 id="textArea"
                 name="tellUsMore"
                 placeholder="Tell me more about your project, needs, and timeline."
+                rows="20" cols="30"
               ></textarea>
               <div class="submit-area">
                 <input id="formBtn" class="button" type="submit" value="Send" />
@@ -236,10 +228,21 @@
             </form>
           </div>
         </div>
+        <p>This page was built by Jeff Moro</p>
+        <div class="footer-img-container">
+          <a href="https://www.linkedin.com/in/jeffmoro/" target="_blank">
+            <img src="./assets/linkedin-original.svg" alt="LinkendIn" />
+          </a>
+          <a href="https://github.com/Reptartheman" target="_blank">
+            <img src="./assets/github (1).svg" alt="GitHub" />
+          </a>
+        </div>
+
       </div>
     </footer>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+      let formBtn = document.getElementById('formBtn');
       function sendEmail() {
         Email.send({
           Host: "smtp.elasticemail.com",
@@ -249,7 +252,10 @@
           From: document.getElementById("email").value,
           Subject: "Project inquiry",
           Body: document.getElementById("textArea").value,
-        }).then((message) => alert("Message sent! I'll be in touch soon."));
+        }).then((message) => {
+          formBtn.value = "SENT!"
+          formBtn.style.backgroundColor = "#02C278";
+        });
       }
     </script>
     <script src="script.js" type="module"></script>
