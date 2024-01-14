@@ -1,23 +1,65 @@
 @media (max-width: 1250px) {
-  .hire-us-right {
-    padding: 0;
-  }
 
-  .benefits-list {
-    grid-column: 2 / span 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "responsive custom" 
-    "premium docs";
-  }
+ .hero-section {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "leftSide" "rightSide";
+  justify-items: center;
+  gap: var(--size-24);
+ } 
+
+ .left-side {
+  width: 65vw;
+ }
+
+ .right-side {
+  width: 52vw;
+ }
+
+ .skills-container {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-areas: "skills-right" "certs-list";
+  gap: 0;
+ }
+
+ .skills-right {
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: var(--size-16);
+ }
+
+ .skills-right .bubble-small, .skills-right .bubble-large {
+  position:initial;
+ }
+
+ .html, .css, .javascript, .react, .node, .github, .figma {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ }
+
+ .css {
+  order: 7;
+ }
+
+.certs-list {
+  grid-template-areas: "uconn" "react" "html mimo";
+}
+
 
 }
 
 @media (max-width: 1046px) {
   .hero-section {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
+    gap: 0;
   }
+
+
+
 }
 
 
@@ -63,7 +105,7 @@
 
   .hamburger {
     font-size: var(--size-24);
-    color: var(--color-two);
+    color: var(--color-three);
   }
 
   .navbar-nav {
@@ -78,467 +120,16 @@
     align-self: center;
   }
 
-
-
-
-  .left-side {
-    width: fit-content;
-  }
-
-  .right-side {
-    width: 44.5rem;
-    height: 19.313rem;
-  }
-
-  .google {
-    top: 0rem; 
-    left: 6.875rem;
-  }
-  
-  .google-ads {
-    top: 13.063rem; 
-    left: 14.375rem; 
-  }
-  
-  .attlasian {
-    top: 0rem; 
-    left: 18rem;
-  }
-  
-  .paypal {
-    top: 6.188rem;
-    left: 7rem;
-  }
-  
-  .weave {
-    top: 6.188rem;
-    left: 26rem;
-  }
-  
-  .calendar {
-    top: 14.313rem;
-    left: 32.313rem;
-  }
-  
-  .asana {
-    top: 0rem; 
-    left: 33.313rem;
-  }
-
-  .left-side-header {
-    text-align: center;
-  }
-
-  .actions {
-    justify-content: center;
-  }
-
-
-  .benefits-list {
-    justify-content: space-between;
-  }
-
-  .banner-section {
-    margin-top: var(--size-50);
-  }
-
-  .banner-section-content {
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    background-color: transparent;
-    gap: var(--size-50);
-  }
-
-  .banner-section-content, .banner-left {
-    align-items: center;
-  }
-
-  .banner-left {
-    padding: var(--size-50) 0;
-    width: 20rem;
-  }
-
-  .banner-left h2 {
-    text-align: center;
-  }
-
-  .banner-right {
-    align-items: flex-end;
-  }
-
-  .banner-right img {
-    width: 100%;
-    height: unset;
-  }
-
-
-  .hire-us-content {
-    grid-auto-flow: row;
-  }
-
-  .hire-us-left-container {
-    flex-direction: row;
-  }
-
-  .hire-us-right {
-    width: 100%;
-    padding: 0;
-  }
-
-  .plan-info {
-    flex-wrap: wrap;
-  }
-
-  .price-card {
-    width: 100%;
-  }
-
-  .plan-header hr {
-    width: 90%;
-  }
-
-  .plan-header,
-  .plan-footer {
-    align-items: center;
-  }
-
-  .price-grid-item {
-    width: 100%;
-  }
-
-  .footer-menu-list-grid {
-
-    grid-template-areas: "company features" 
-    "footer-docs resources";
-  }
-
-  .hubspot-content {
-    grid-template-areas: 
-    "hubspot-left"
-    "hubspot-right";
-    gap: var(--size-30);
-  }
-
-  .hubspot-left {
-    justify-self: center;
-  }
-
-  .hubspot-text {
-    text-align: center;
-    align-self: center;
-    width: 93%;
-  }
-
-  .description, .person-name {
-   align-items: center;
-  }
-
-
-
 }
 
 
 @media only screen and (min-width: 285px) and (max-width: 767px) {
 
 
-  .right-side {
-    width: 20.5rem;
-    height: 19.313;
-  }
-
-  .google {
-    top: 0rem; 
-    left: 0rem;
-  }
-  
-  .google-ads {
-    top: 13rem; 
-    left: 6.625rem; 
-  }
-  
-  .attlasian {
-    top: 0rem; 
-    left: 7.125rem;
-  }
-  
-  .paypal {
-    top: 6.188rem;
-    left: 0rem;
-  }
-  
-  .weave {
-    top: 6.188rem;
-    left: 11.5rem;
-  }
-  
-  .calendar {
-    top: 14rem;
-    left: 15rem;
-  }
-  
-  .asana {
-    top: 0rem; 
-    left: 15.5rem;
-  }
-
-  .benefits-list {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: 
-    "responsive"
-    "custom"
-    "premium"
-    "docs";
-  }
-
-
-  .circle-top::before, .circle-top::after {
-    display: none;
-  } 
-
-  .benefits-item p {
-    width: 100%;
-  }
-
-  .circles-list {
-    grid-template-areas: 
-    "circle-one"
-    "circle-two"
-    "circle-three"
-    "circle-four";
-    justify-items: start;
-    gap: var(--size-20);
-  }
-
-  .circle-container {
-    flex-direction: row;
-    gap: var(--size-16);
-  }
-
-  .circle-container h4 {
-    align-self: normal;
-  }
-
-  .hubspot-left {
-    width: 22.5rem;
-    height: 24rem;
-  }
-
-  .overlap-img {
-    width: 20rem;
-  }
-
-  .woman {
-    width: 16rem;
-    height: 18.75rem;
-    left: 4rem;
-  top: 0rem;
-  }
-
-  .dots {
-    width: 8.813rem;
-    height: 16.313rem;
-    left: 1.75rem;
-  top: 4.875rem;
-  }
-
-
-  .trusted-brands {
-    margin: 40px 0px 60px 0px;
-  }
-
-  .brands-list {
-    height: fit-content;
-  }
-
-
-  .brands-list ul {
-    grid-template-areas: 
-    "weebly" 
-    "uber" 
-    "slack" 
-    "airbnb" 
-    "spotify";
-    gap: var(--size-30);
-  }
-
-  .plan-info {
-    padding: 0;
-  }
-
-  .plan-info .price-card {
-    padding: var(--size-20);
-  }
-
-  .price-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-title p {
-    width: 63%;
-    text-align: center;
-  }
-
-  .hire-us-content {
-    padding: var(--size-50) 0 var(--size-50);
-    width: 100%;
-    justify-items: center;
-  }
-  
-  .hire-us-left-container {
-    flex-direction: column;
-    gap: var(--size-16);
-    width: 70%;
-    align-self: center;
-  }
-
-  .hire-us-right {
-    display: flex;
-    width: 90%;
-  }
-
-  .hire-us-left {
-    gap: var(--size-24);
-    align-items: center;
-  }
-
-  .hire-us-left hr {
-  width: 100%;
-}
-
-
-.hire-us-left p:nth-of-type(2) {
-  text-align: center;
-  width: 60%;
-}
-
-.hire-us-btm {
-  align-self: center;
-}
-
-.form {
-  width: 100%;
-}
-
-.form-group {
-  flex-direction: column;
-  align-items: stretch;
-  width: 90%;
-}
-
-.footer-top-container {
-  grid-template-columns: 1fr;
-  grid-auto-flow: initial;
-  justify-items: center;
-}
-
-.footer-menu-list-grid {
-  grid-template-areas: 
-  "company" 
-  "features" 
-  "footer-docs" 
-  "resources";
-  justify-items: center;
-}
-
-.footer-menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: var(--size-24);
-}
-
-ul.bottom-list {
-  text-align: center;
-}
-
-ul.footer-menu-list {
-  text-align: center;
-}
-
-.footer-menu-list li {
-  gap: var(--size-20);
-}
-
-.footer-btm {
-  grid-template-columns: 1fr;
-  grid-template-areas: 
-  "breadcrumb"
-  "socials"
-  "copyright";
-}
-
-
-.footer-btm-breadcrumb {
-  grid-area: breadcrumb;
-  justify-content: center;
-}
-
-.footer-btm > .footer-socials {
-  grid-area: socials;
-  justify-content: center;
-}
-
-.footer-copyright {
-  grid-area: copyright;
-}
 
 
 }
 
 @media only screen and (min-width: 285px) and (max-width: 560px) {
 
-  .navbar-nav {
-    flex-direction: columnf;
-  }
-
-
-  .banner-left h2 {
-    width: 64%;
-  }
-
-  .banner-right {
-    height: auto;
-  }
-
-
-  .hubspot-left {
-    width: 14.5rem;
-    justify-self: normal;
-    position: relative;
-    right: var(--size-50);
-  }
-  
-  .hire-us-content {
-    justify-items: normal;
-  }
-
-  .hire-us-left-container, .hire-us-right  {
-    position: relative;
-    right: var(--size-50);
-  }
-
-  .hire-us-right {
-    width: 65%;
-    position: relative;
-    right: 25px;
-}
-
-
-  .hire-us-btm {
-    align-self: center;
-  }
-
-
-  .form h2 {
-    width: 80%;
-  }
-
-  .footer-btm > .footer-socials {
-    flex-wrap: wrap;
-  }
-
-.country-dropdown {
-    margin-top: var(--size-30);
-  }
 }
