@@ -439,8 +439,42 @@ grid-area: Zapier;
   justify-self: center;
   grid-column: 2/ span 1;
   display: grid;
-  grid-template-areas:"form" "img-container" ;
+  grid-template-areas:"form btm-card";
+  gap: var(--size-30);
+}
+
+.btm-card {
+  grid-area: btm-card;
+}
+
+.btm-card-inner {
+  width: 20vw;
+  height: 59vh;
+  display: flex;
+  border: 1px solid #ffffff;
+  padding: var(--size-20);
+  flex-direction: column;
+  gap: var(--size-10);
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 2px 10px 2px #bfbfbf;
+}
+
+.btm-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: var(--size-16);
+}
+
+.btm-card-header h1 {
+  font-size: var(--size-24);
+}
+.btm-card-header h2 {
+  font-size: var(--size-16);
+  margin-bottom: var(--size-20);
+  text-align: center;
 }
 
 .footer-content p {
