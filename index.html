@@ -65,42 +65,24 @@
       data-aos="fade-down"
     >
       <div class="skills-title flex-align-center gap-10">
-        <h1>Skills & Certs</h1>
+        <h1>Skills</h1>
         <p>
           With an ever expanding array of skills, Jeff has the ability to make
           your vision come to life.
         </p>
       </div>
       <div class="skills-container blur">
-        <div class="certs-list">
-          <div class="uconn certs-item">
-            <img
-              src="./assets/UConn Certificate - Jeff Moro1024_1.jpg"
-              alt="responsive"
-            />
-          </div>
-          <div class="react certs-item">
-            <img src="./assets/React:Redux Cert.jpeg" alt="responsive" />
-          </div>
-
-          <div class="html certs-item">
-            <img src="./assets/Mimo HTML Cert.jpg" alt="responsive" />
-          </div>
-
-          <div class="mimo certs-item">
-            <img src="./assets/Mimo JS Cert.jpg" alt="responsive" />
-          </div>
-        </div>
         <div class="skills-right blur">
-          <div class="bubble-small css">
-            <img class="css" src="./assets/file-type-css.svg" />
-          </div>
           <div class="bubble-small html">
             <img class="html" src="./assets/file-type-html.svg" />
+          </div>
+          <div class="bubble-small css">
+            <img class="css" src="./assets/file-type-css.svg" />
           </div>
           <div class="bubble-large javascript">
             <img class="javascript" src="./assets/javascript-js.svg" />
           </div>
+
           <div class="bubble-large react">
             <img class="react" src="./assets/react.svg" />
           </div>
@@ -110,11 +92,29 @@
           <div class="bubble-large github">
             <img class="github" src="./assets/github.svg" />
           </div>
+
+          <div class="bubble-large google">
+            <img class="google" src="./assets/google.svg" />
+          </div>
           <div class="bubble-large figma">
             <img class="figma" src="./assets/figma.svg" />
           </div>
+          <div class="bubble-small zapier">
+            <img class="zapier" src="./assets/zapier.svg" />
+          </div>
+          <div class="bubble-small gmail">
+            <img class="gmail" src="./assets/gmail.svg" />
+          </div>
         </div>
+ 
       </div>
+      <div class="button-container">
+      <button>
+        <a href="./assets/Jeff Moro Web Dev resume.pdf" download>
+          Download Jeff's Resume
+        </a>
+      </button>
+    </div>
     </section>
     <div id="portfolio"></div>
     <section
@@ -192,10 +192,13 @@
     </section>
 
     <footer class="footer section-container" id="GetInTouch">
+      <div class="footer-title">
+        <h1>Get In touch</h1>
+      </div>
       <div class="footer-content">
         <div class="form">
           <div class="form-container">
-            <h3>Fill out the form and we'll be in touch as soon as possible</h3>
+            <h3>Fill out the form and I'll be in touch as soon as possible</h3>
             <form onsubmit="sendEmail(); reset(); return false">
               <label for="firstName">Full Name</label>
               <input
@@ -220,7 +223,8 @@
                 id="textArea"
                 name="tellUsMore"
                 placeholder="Tell me more about your project, needs, and timeline."
-                rows="20" cols="30"
+                rows="20"
+                cols="30"
               ></textarea>
               <div class="submit-area">
                 <input id="formBtn" class="button" type="submit" value="Send" />
@@ -228,21 +232,28 @@
             </form>
           </div>
         </div>
-        <p>This page was built by Jeff Moro</p>
-        <div class="footer-img-container">
-          <a href="https://www.linkedin.com/in/jeffmoro/" target="_blank">
-            <img src="./assets/linkedin-original.svg" alt="LinkendIn" />
-          </a>
-          <a href="https://github.com/Reptartheman" target="_blank">
-            <img src="./assets/github (1).svg" alt="GitHub" />
-          </a>
-        </div>
-
       </div>
     </footer>
+    <section class="footers-footer">
+      <p>This page was built by Jeff Moro</p>
+      <div class="footer-img-container">
+        <a href="https://www.linkedin.com/in/jeffmoro/" target="_blank">
+          <img src="./assets/linkedin-original.svg" alt="LinkendIn" />
+        </a>
+        <a href="https://github.com/Reptartheman" target="_blank">
+          <img src="./assets/github (1).svg" alt="GitHub" />
+        </a>
+        <a
+          href="https://www.upwork.com/freelancers/~0176af676e15fe3b49?viewMode=1"
+          target="_blank"
+        >
+          <img src="./assets/upwork.svg" alt="GitHub" />
+        </a>
+      </div>
+    </section>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      let formBtn = document.getElementById('formBtn');
+      let formBtn = document.getElementById("formBtn");
       function sendEmail() {
         Email.send({
           Host: "smtp.elasticemail.com",
@@ -253,7 +264,7 @@
           Subject: "Project inquiry",
           Body: document.getElementById("textArea").value,
         }).then((message) => {
-          formBtn.value = "SENT!"
+          formBtn.value = "SENT!";
           formBtn.style.backgroundColor = "#02C278";
         });
       }

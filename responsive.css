@@ -1,5 +1,11 @@
 @media (max-width: 1250px) {
 
+  h2 {
+    font-size: var(--size-24);
+    text-align: center;
+  }
+
+
  .hero-section {
   grid-template-columns: repeat(1, 1fr);
   grid-template-areas: "leftSide" "rightSide";
@@ -8,45 +14,15 @@
  } 
 
  .left-side {
-  width: 65vw;
+  width: 55vw;
  }
 
  .right-side {
   width: 52vw;
  }
 
- .skills-container {
-  grid-template-columns: 1fr;
-  justify-items: center;
-  grid-template-areas: "skills-right" "certs-list";
-  gap: 0;
- }
+/*  */
 
- .skills-right {
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  gap: var(--size-16);
- }
-
- .skills-right .bubble-small, .skills-right .bubble-large {
-  position:initial;
- }
-
- .html, .css, .javascript, .react, .node, .github, .figma {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
- }
-
- .css {
-  order: 7;
- }
-
-.certs-list {
-  grid-template-areas: "uconn" "react" "html mimo";
-}
 
 
 }
@@ -64,6 +40,11 @@
 
 
 @media (max-width: 1023px) {
+
+  .left-side-header p {
+    line-height: 3.5vw;
+  }
+
 
   .page-header {
     justify-content: space-between;
@@ -118,6 +99,14 @@
 
   .nav-container a {
     align-self: center;
+  }
+
+  .left-side {
+    width: 50vw;
+  }
+
+  .featured-card {
+    width: fit-content;
   }
 
 }
