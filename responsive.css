@@ -58,6 +58,13 @@
   .nav-container .navbar-nav .nav-link a {
     font-size: var(--size-16);
   }
+  .nav-container .navbar-nav .nav-link a:active {
+    text-decoration: underline;
+  }
+  .nav-container .navbar-nav .nav-link a:hover {
+    text-decoration: underline;
+  }
+
 
 
   [aria-controls="navbarDropdown"] {
@@ -75,12 +82,14 @@
     justify-content: center;
     gap: var(--size-50);
     position: absolute;
-    right: 0;
-    top: var(--size-50);
-    background-color: var(--color-three);
-    width: 100%;
-    height: 90vh;
-    box-shadow: 0px 0px 20px rgba(52, 49, 75, 0.1);
+    right: 0px;
+    top: 37px;
+    background-color: #03312ef1;
+    width: 15%;
+    height: 93vh;
+    box-shadow: -2px 2px 10px 2px #bfbfbf;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
   }
 
 
@@ -91,7 +100,7 @@
 
   .navbar-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
@@ -101,13 +110,58 @@
     align-self: center;
   }
 
+  button.navbar-toggler {
+    box-shadow: none;
+    cursor: pointer;
+  }
+
   .left-side {
     width: 50vw;
   }
 
+
+
   .featured-card {
     width: fit-content;
+    padding: var(--size-24);
   }
+
+  .featured-card-header p {
+    text-align: center;
+  }
+
+  .portfolio-grid-item {
+    padding: var(--size-16);
+    width: 18.5vw;
+  }
+
+  .form-container > form {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "fullName" "email" "textArea";
+  }
+
+  #fullName {
+    grid-area: fullName;
+  }
+
+  #email {
+    grid-area: email;
+  }
+
+  #textArea {
+    grid-area: textArea;
+  }
+
+  .btm-card {
+    width: 24vw;
+    height: 65vh;
+    padding: 0;
+  }
+
+  .btm-card-header h1 {
+    text-align: center;
+  }
+
 
 }
 
@@ -117,8 +171,89 @@
 
 
 
+  .section-container {
+    grid-template-columns: minmax(5%, 1fr) minmax(90%, 1fr) minmax(5%, 1fr);
+  }
+
+  .left-side, .right-side {
+    width: 76vw;
+  }
+
+  .left-side-header p {
+    font-size: var(--size-16);
+    line-height: 5.6vw;
+    margin: 0;
+  }
+
+  .skills-title p {
+    font-size: var(--size-16);
+    text-align: center;
+    width: 80%;
+  }
+  
+  .skills-right {
+    display: grid;   
+    grid-template-areas: 
+   '. . HTML CSS . .'
+   '. . JavaScript React . .'
+   '. . Node Github . .'
+   '. . Google Figma . .'
+   '. . Zapier GMail . .';
+    
+    gap: var(--size-20);
+  }
+
+.button-container > button a {
+  font-size: var(--size-20);
+}
+
+.portfolio-info {
+  flex-wrap: wrap;
+  padding: 0 1.75rem;
+}
+
+.featured-card-header {
+  align-items: center;
+}
+
+.featured-card img {
+  width: auto;
+}
+
+.portfolio-grid-item {
+  width: 46.5vw;
+}
+
+.footer-content {
+  grid-template-areas: "form" "btm-card";
+  justify-items: center;
+}
+
+.btm-card {
+  width: 70vw;
+  height: fit-content;
+}
+
+.btm-card-inner {
+  padding-top: var(--size-20);
+}
+
 }
 
 @media only screen and (min-width: 285px) and (max-width: 560px) {
 
+  [aria-expanded="true"] ~ div.nav-container {
+
+    position: absolute;
+    right: 9px;
+    top: 37px;
+    background-color: #03312ef1;
+    width: 100%;
+    padding: 0;
+    height: 8vh;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
 }

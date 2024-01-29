@@ -28,16 +28,26 @@ function removeAlignCenter() {
   }
 }
 
+function changeAnimationType() {
+  if (windowWidth <= 1023) {
+    navbarList.classList.remove('blur');
+    navbarList.classList.add('from-back');
+  }
+}
 
-function toggleNav({ target }) {
-  const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-  navButton.setAttribute('aria-expanded', !expanded);
+
+function toggleNav(e) {
+  const $navbarToggler = document.querySelector(".navbar-toggler")
+  
+  const expanded = $navbarToggler.getAttribute('aria-expanded') === 'true' || false;
+  $navbarToggler.setAttribute('aria-expanded', !expanded);
   if (expanded) {
     hamburgerMenu.innerHTML = `&#9776;`;
   } else {
     hamburgerMenu.innerHTML = `&#88;`; 
-    console.log(target);
+   
   }
 }
 navButton.addEventListener('click', toggleNav);
 removeAlignCenter();
+changeAnimationType();
