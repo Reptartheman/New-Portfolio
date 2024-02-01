@@ -245,7 +245,6 @@
   [aria-expanded="true"] ~ div.nav-container {
 
     position: absolute;
-    right: 9px;
     top: 37px;
     background-color: #03312ef1;
     width: 100%;

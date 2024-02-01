@@ -1,4 +1,4 @@
-
+let navbarNav = document.querySelector('.navbar-nav')
 let navbarList = document.getElementById('navbarList');
 let windowWidth = window.innerWidth;
 let hamburgerMenu = document.querySelector('.hamburger');
@@ -28,12 +28,12 @@ function removeAlignCenter() {
   }
 }
 
-function changeAnimationType() {
+/* function changeAnimationType() {
   if (windowWidth <= 1023) {
-    navbarList.classList.remove('blur');
-    navbarList.classList.add('from-back');
+    navbarNav.classList.remove('blur');
+    navbarNav.classList.add('from-back');
   }
-}
+} */
 
 
 function toggleNav(e) {
@@ -50,4 +50,4 @@ function toggleNav(e) {
 }
 navButton.addEventListener('click', toggleNav);
 removeAlignCenter();
-changeAnimationType();
+//changeAnimationType();
