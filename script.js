@@ -28,12 +28,6 @@ function removeAlignCenter() {
   }
 }
 
-/* function changeAnimationType() {
-  if (windowWidth <= 1023) {
-    navbarNav.classList.remove('blur');
-    navbarNav.classList.add('from-back');
-  }
-} */
 
 
 function toggleNav(e) {
@@ -50,4 +44,3 @@ function toggleNav(e) {
 }
 navButton.addEventListener('click', toggleNav);
 removeAlignCenter();
-//changeAnimationType();
