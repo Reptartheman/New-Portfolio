@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="./default.css" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./responsive.css" />
-    <link rel="icon" type="image/x-icon" href="/assets/applications-development-web.svg">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/applications-development-web.svg"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -35,6 +39,7 @@
             <ul class="navbar-nav from-back" id="navbarList">
               <li class="nav-link"><a href="#home">Home</a></li>
               <li class="nav-link"><a href="#skills">Skills</a></li>
+              <li class="nav-link"><a href="#articles">Articles</a></li>
               <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
               <li class="nav-link"><a href="#GetInTouch">Get in touch</a></li>
             </ul>
@@ -107,16 +112,56 @@
             <img class="gmail" src="./assets/gmail.svg" />
           </div>
         </div>
- 
       </div>
       <div class="button-container">
-      <button>
-        <a href="./assets/Jeff Moro Web Dev resume.pdf" download>
-          Download Jeff's Resume
-        </a>
-      </button>
-    </div>
+        <button>
+          <a href="./assets/Jeff Moro Web Dev resume.pdf" download>
+            Download Jeff's Resume
+          </a>
+        </button>
+      </div>
     </section>
+
+    <div id="articles"></div>
+    <section
+      class="articles section-container section-background from-back"
+      data-aos="fade-down"
+    >
+      <div class="articles-title flex-align-center gap-10">
+        <h1>Medium Articles</h1>
+        <p>
+          Below are some of Jeff's short articles written on
+          <a target="_blank" href="https://medium.com/">Medium.com</a>
+        </p>
+        <ul class="articles-list">
+          <a
+            target="_blank"
+            href="https://medium.com/@jeffmoromusic/css-units-bc43cfaaa432"
+          >
+            <li class="articles-list-grid-item">
+              CSS Units Overview
+              <img src="./assets/thumbnailUNITS.png" alt="thumbnail image" />
+            </li>
+          </a>
+          <a
+            target="_blank"
+            href="https://medium.com/@jeffmoromusic/using-css-grid-feef88d1774c"
+          >
+            <li class="articles-list-grid-item">
+              Using Percentage for CSS Grid
+              <img src="./assets/thumbnailGRID.png" alt="thumbnail image" />
+            </li>
+          </a>
+
+          <a class="articles-list-grid-item articles-grid-footer more-to-come"  target="_blank" href="https://medium.com/@jeffmoromusic">
+            <li>
+              More to come: follow Jeff on Medium.
+            </li>
+          </a>
+        </ul>
+      </div>
+    </section>
+
     <div id="portfolio"></div>
     <section
       class="portfolio section-container section-background from-back"
@@ -244,6 +289,7 @@
               <img src="./assets/IMG_9235.JPG" alt="RetroNome" />
             </a>
           </div>
+        </div>
       </div>
     </footer>
     <section class="footers-footer">
