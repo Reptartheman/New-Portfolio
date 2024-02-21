@@ -39,7 +39,7 @@
 }
 
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 
   .left-side-header p {
     line-height: 3.5vw;
@@ -162,13 +162,27 @@
     text-align: center;
   }
 
+  .articles-list-grid-item {
+    gap: var(--size-10);
+  }
+
+  .articles-list li {
+    align-items: center;
+    font-size: 3vw;
+    text-align: center;
+    padding: var(--size-10);
+  }
+
+
 
 }
 
 
 @media only screen and (min-width: 285px) and (max-width: 767px) {
 
-
+  h1 {
+    font-size: var(--size-30);
+  }
 
 
   .section-container {
@@ -176,12 +190,13 @@
   }
 
   .left-side, .right-side {
-    width: 76vw;
+    width: 72vw;
   }
+
 
   .left-side-header p {
     font-size: var(--size-16);
-    line-height: 5.6vw;
+    line-height: 6vw;
     margin: 0;
   }
 
@@ -201,6 +216,17 @@
    '. . Zapier GMail . .';
     
     gap: var(--size-20);
+  }
+
+  .articles-title p {
+    text-align: center;
+    font-size: var(--size-16);
+  }
+
+  .more-to-come {
+    padding: 0;
+    width: 50vw;
+    margin-top: var(--size-10);
   }
 
 .button-container > button a {
@@ -229,6 +255,10 @@
   justify-items: center;
 }
 
+.form {
+  padding: var(--size-16);
+}
+
 .btm-card {
   width: 70vw;
   height: fit-content;
@@ -254,5 +284,6 @@
 
 .navbar-nav {
   flex-direction: row;
+  gap: var(--size-10);
 }
 }

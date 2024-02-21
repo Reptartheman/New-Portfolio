@@ -71,7 +71,7 @@ p {
   line-height: var(--size-24);
   font-family: var(--font-main);
   color: #f2f1f4;
-  letter-spacing: 0;
+  letter-spacing: 0.5px;
 }
 
 h1 {
