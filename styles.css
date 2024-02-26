@@ -416,7 +416,7 @@ button:hover {
 }
 
 .featured-card {
-  width: 20vw;
+  width: 19rem;
   display: flex;
   border: 1px solid #ffffff;
   padding: var(--size-30);
@@ -431,21 +431,26 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: var(--size-10);
+  align-items: center;
 }
 
 .featured-card-header p {
   font-size: var(--size-16);
+  text-align: center;
 }
 
 .featured-card img {
-  width: 20vw;
+  width: 22vw;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "emmas" "saas";
   height: 100%;
+  gap: 1vw;
 }
+
 
 .portfolio-grid .portfolio-grid-item:nth-child(3),
 .portfolio-grid .portfolio-grid-item:nth-child(4) {
@@ -457,10 +462,19 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   gap: var(--size-20);
-  padding: var(--size-20);
+  padding: var(--size-6);
   border: 1px solid #ffffff;
-  width: 17.5vw;
+  width: 18rem;
+  height: 23rem;
   box-shadow: -2px 2px 10px 2px #bfbfbf;
+}
+
+.emmas {
+  grid-area: emmas;
+}
+
+.saas {
+  grid-area: saas;
 }
 
 .featured-card,

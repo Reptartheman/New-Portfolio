@@ -120,19 +120,14 @@
   }
 
 
-
-  .featured-card {
-    width: fit-content;
-    padding: var(--size-24);
-  }
-
-  .featured-card-header p {
-    text-align: center;
-  }
+.featured-card {
+  width: 14rem;
+}
 
   .portfolio-grid-item {
     padding: var(--size-16);
-    width: 18.5vw;
+    width: 14rem;
+    height: 18rem;
   }
 
   .form-container > form {
@@ -178,7 +173,7 @@
 }
 
 
-@media only screen and (min-width: 285px) and (max-width: 767px) {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
 
   h1 {
     font-size: var(--size-30);
@@ -234,20 +229,19 @@
 }
 
 .portfolio-info {
-  flex-wrap: wrap;
   padding: 0 1.75rem;
+  gap: var(--size-14);
 }
 
-.featured-card-header {
-  align-items: center;
-}
 
 .featured-card img {
   width: auto;
 }
 
 .portfolio-grid-item {
-  width: 46.5vw;
+  padding: var(--size-6);
+  width: 9rem;
+    height: 15.5rem;
 }
 
 .footer-content {
