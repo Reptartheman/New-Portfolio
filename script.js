@@ -5,14 +5,6 @@ let hamburgerMenu = document.querySelector('.hamburger');
 const navButton = document.querySelector('button[aria-expanded]');
 const nav = document.getElementById("topNav");
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-// init AOS animation
-AOS.init({
-    duration: 1000,
-    offset: 100,
-});
 
 window.onscroll = function() {
   if (window.scrollY > 100) {
@@ -30,17 +22,12 @@ function removeAlignCenter() {
 
 
 
-function toggleNav(e) {
-  const $navbarToggler = document.querySelector(".navbar-toggler")
-  
-  const expanded = $navbarToggler.getAttribute('aria-expanded') === 'true' || false;
-  $navbarToggler.setAttribute('aria-expanded', !expanded);
-  if (expanded) {
-    hamburgerMenu.innerHTML = `&#9776;`;
-  } else {
-    hamburgerMenu.innerHTML = `&#88;`; 
-   
-  }
+function toggleNav() {
+  const expanded = navButton.getAttribute("aria-expanded") === "true";
+  navButton.setAttribute("aria-expanded", !expanded);
+  hamburgerMenu.innerHTML = expanded ? `&#9776;` : `&#88;`;
 }
+
+
 navButton.addEventListener('click', toggleNav);
 removeAlignCenter();
