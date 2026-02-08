@@ -1,0 +1,120 @@
+.footer {
+  background: var(--graphite);
+  padding: var(--space-3xl) var(--space-xl) 0;
+  border-top: 1px solid rgba(232, 220, 194, 0.1);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+/* ── Brand column ── */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--floral-white);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: var(--sand-dune);
+  opacity: 0.75;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* ── Links column ── */
+.colTitle {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--golden-apricot);
+  margin-bottom: var(--space-md);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: var(--sand-dune);
+  transition: color var(--transition);
+}
+
+.navLink:hover {
+  color: var(--floral-white);
+}
+
+/* ── Social column ── */
+.icons {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.iconLink:hover {
+  background: var(--blue-energy);
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* ── Bottom bar ── */
+.bottom {
+  border-top: 1px solid rgba(232, 220, 194, 0.1);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.bottom p {
+  font-size: 0.82rem;
+  color: var(--sand-dune);
+  opacity: 0.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .tagline {
+    max-width: 100%;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+}

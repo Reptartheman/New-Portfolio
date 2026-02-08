@@ -1,0 +1,127 @@
+.contact {
+  padding: var(--space-4xl) var(--space-xl);
+  background: var(--graphite);
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--floral-white);
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--sand-dune);
+  opacity: 0.85;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sand-dune);
+}
+
+.input,
+.textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--sand-dune);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  color: var(--floral-white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(232, 220, 194, 0.45);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--blue-energy);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submit {
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--sage-green);
+  color: var(--floral-white);
+  transition: background var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--golden-apricot);
+  box-shadow: 0 4px 24px rgba(217, 143, 69, 0.3);
+}
+
+.submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #e85c5c;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
