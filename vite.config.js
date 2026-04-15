@@ -10,4 +10,8 @@ export default defineConfig({
       '@assets': '/src/assets',
     },
   },
+  server: {
+    open: true,
+    port: 5173,
+  },
 });
