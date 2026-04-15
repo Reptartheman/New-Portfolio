@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
+import logo from '../../assets/LOGOBannerBLACKOnTAN SQUARE.png';
+import tanOnBlackLogo from '../../assets/LOGOTANonBLACK.png'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -24,9 +26,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo}>
-          EQ You‑i
-        </a>
+        <img className={styles.logoImg} src={scrolled? tanOnBlackLogo :logo} alt="EQ You-i company logo: black square with stylized clock icon and company name on tan background" />
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.active : ''}`}

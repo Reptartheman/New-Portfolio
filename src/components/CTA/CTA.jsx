@@ -11,14 +11,10 @@ export default function CTA() {
         ref={ref}
         className={`${styles.content} ${isInView ? styles.visible : ''}`}
       >
-        <p className={styles.tagline}>Creative Web Solutions</p>
         <h1 className={styles.title}>
           EQ You‑i
         </h1>
-        <p className={styles.subtitle}>
-          Balancing the art &amp; science of the web — building beautiful,
-          functional digital experiences that amplify your brand.
-        </p>
+        <p className={styles.tagline}><span>You</span>r <span>i</span>deas <span>i</span>n tune</p>
         <div className={styles.actions}>
           <a href="#contact" className={styles.btnPrimary}>
             Start a Project

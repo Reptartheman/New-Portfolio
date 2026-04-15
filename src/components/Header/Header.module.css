@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--graphite);
+  background: var(--sand-dune);
   transition: box-shadow var(--transition), background var(--transition);
 }
 
@@ -19,15 +19,21 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 var(--space-xl);
   height: var(--header-height);
+}
+
+.logoImg {
+  height: auto;
+  width: 6dvw;
+  transition: opacity var(--transition);
 }
 
 .logo {
   font-family: var(--font-heading);
   font-size: 1.6rem;
-  color: var(--floral-white);
+  color: var(--graphite);
   letter-spacing: 0.08em;
   white-space: nowrap;
   transition: color var(--transition);
@@ -47,7 +53,7 @@
 .navLink {
   font-family: var(--font-heading);
   font-size: 0.95rem;
-  color: var(--sand-dune);
+  color: var(--graphite);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   position: relative;

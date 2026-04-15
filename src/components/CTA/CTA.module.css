@@ -13,6 +13,7 @@
       #3a3a3a 40%,
       var(--graphite) 100%
     );
+    /* background-image: url('/assets/CTA_BACKGROUND.jpg'); */
 }
 
 /* subtle decorative gradient orbs */
@@ -66,17 +67,21 @@
 
 .tagline {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--golden-apricot);
+  color: var(--sand-dune);
   margin-bottom: var(--space-md);
+}
+
+.tagline span {
+  color: var(--blue-energy);
 }
 
 .title {
   font-size: clamp(3rem, 8vw, 5.5rem);
-  color: var(--floral-white);
+  color: var(--sand-dune);
   margin-bottom: var(--space-lg);
   line-height: 1.05;
 }
@@ -110,8 +115,8 @@
 }
 
 .btnPrimary {
-  background: var(--blue-energy);
-  color: var(--floral-white);
+  background: var(--sand-dune);
+  color: var(--graphite);
 }
 
 .btnPrimary:hover {
