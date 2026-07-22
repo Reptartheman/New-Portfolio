@@ -1,0 +1,68 @@
+/* Placeholder styling that mirrors the /web sections: token-driven, alternating
+   backgrounds, and the same fade-up-on-scroll reveal. Each variant sets local
+   --section-bg / --section-fg custom props so .title and .body pick up the right
+   colors without per-variant overrides. */
+
+.hero {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4xl) var(--space-xl);
+  background: var(--graphite);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--sand-dune);
+}
+
+.heroTagline {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--sand-dune);
+  opacity: 0.8;
+  margin-top: var(--space-md);
+}
+
+.section {
+  padding: var(--space-4xl) var(--space-xl);
+  background: var(--section-bg);
+}
+
+.dark {
+  --section-bg: var(--graphite);
+  --section-fg: var(--sand-dune);
+}
+
+.light {
+  --section-bg: var(--sand-dune);
+  --section-fg: var(--graphite);
+}
+
+/* Shared reveal wrapper (hero + sections) */
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--section-fg);
+  margin-bottom: var(--space-md);
+}
+
+.body {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--section-fg);
+  opacity: 0.8;
+  max-width: 670px;
+  margin: 0 auto;
+}

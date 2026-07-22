@@ -26,7 +26,7 @@
 
 .logoImg {
   height: auto;
-  width: 6dvw;
+  width: 5dvw;
   transition: opacity var(--transition);
 }
 
@@ -70,6 +70,10 @@
   height: 2px;
   background: var(--golden-apricot);
   transition: width var(--transition);
+}
+
+.scrolled .navLink {
+  color: var(--sand-dune);
 }
 
 .navLink:hover {
