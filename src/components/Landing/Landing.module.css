@@ -1,0 +1,153 @@
+/* Reconciled onto the index.css design tokens. Fonts are intentionally unset:
+   the global rules already give h2/h3 --font-heading and the footer text
+   --font-body. Font-sizes stay literal rem because the token set has spacing
+   (--space-*) but no type scale. The hard-offset shadow is kept deliberately —
+   it echoes the black Memphis linework in the background image. */
+
+/* overflow:hidden is scoped to this container (not body) so it stays local to
+   the landing route and never touches scrolling on /web or /music. */
+.page {
+  min-height: 100dvh;
+  overflow: hidden;
+  background-image: url('../../assets/landing-page-bg.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(5%, 1fr) minmax(90%, 1fr) minmax(5%, 1fr);
+  grid-auto-flow: row;
+  align-items: center;
+  justify-items: center;
+}
+
+.title,
+.cards,
+.footer {
+  grid-column: 2 / span 1;
+}
+
+.shadow {
+  box-shadow: -7px 6px 4px 1.5px #000000;
+}
+
+.title {
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  width: 40%;
+  height: 55%;
+  background-color: var(--floral-white);
+  border-radius: var(--radius-sm);
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* revealed by the fromTop entrance */
+}
+
+.heading {
+  font-weight: 400;
+  color: var(--graphite);
+  text-align: center;
+  font-size: 2vw;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--floral-white);
+  border-radius: var(--radius-sm);
+  width: 40%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0; /* revealed by the fromLeft / fromRight entrances */
+}
+
+.card:hover {
+  background-color: var(--sand-dune);
+}
+
+.cardLink {
+  color: var(--graphite);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cardLink:active {
+  transform: translateY(10px);
+}
+
+.cardTitle {
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+.cardImg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  background-color: var(--floral-white);
+  width: 40%;
+  border-radius: var(--radius-sm);
+  justify-content: center;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+  font-size: 1vw;
+  opacity: 0; /* revealed by the fromBottom entrance */
+}
+
+@media (max-width: 1023px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+
+  .footer p {
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 55%;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 465px) {
+  .heading {
+    font-size: 3vw;
+  }
+
+  .footer {
+    width: 50vw;
+    padding: var(--space-sm);
+  }
+}

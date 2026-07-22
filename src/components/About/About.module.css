@@ -1,6 +1,6 @@
 .about {
   padding: var(--space-4xl) var(--space-xl);
-  background: var(--sand-dune);
+  background: var(--graphite);
 }
 
 .inner {
@@ -57,7 +57,7 @@
 
 .title {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--graphite);
+  color: var(--sand-dune);
 }
 
 .divider {
@@ -68,9 +68,10 @@
 }
 
 .body {
-  font-size: 1.05rem;
+  padding: var(--space-lg);
+  font-size: 1.10rem;
   line-height: 1.75;
-  color: var(--graphite);
+  color: var(--sand-dune);
   opacity: 0.85;
 }
 

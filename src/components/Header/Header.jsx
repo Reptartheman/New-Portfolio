@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from '../../assets/LOGOBannerBLACKOnTAN SQUARE.png';
-import tanOnBlackLogo from '../../assets/LOGOTANonBLACK.png'
-
-const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
-];
+import { NAV_BY_ROUTE } from '../../data/navLinks';
+import blackOnTanLogo from '../../assets/LOGO_BLACK.png';
+import tanOnBlackLogo from '../../assets/LOGO_SAND-DUNE.png'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const navLinks = NAV_BY_ROUTE[pathname] ?? [];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -26,7 +22,9 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <img className={styles.logoImg} src={scrolled? tanOnBlackLogo :logo} alt="EQ You-i company logo: black square with stylized clock icon and company name on tan background" />
+        <Link to="/" aria-label="Back to the chooser">
+          <img className={styles.logoImg} src={scrolled? tanOnBlackLogo : blackOnTanLogo} alt="EQ You-i company logo: black square with stylized clock icon and company name on tan background" />
+        </Link>
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.active : ''}`}
@@ -40,7 +38,7 @@ export default function Header() {
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-          {NAV_LINKS.map(({ label, href }) => (
+          {navLinks.map(({ label, href }) => (
             <a
               key={href}
               href={href}

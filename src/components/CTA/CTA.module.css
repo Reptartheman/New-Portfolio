@@ -1,6 +1,6 @@
 .cta {
   position: relative;
-  min-height: 100dvh;
+  min-height: 95dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,7 @@
   top: -10%;
   left: -8%;
 }
+
 
 .cta::after {
   width: 400px;

@@ -1,7 +1,9 @@
+import { useLocation } from 'react-router-dom';
 import styles from './Footer.module.css';
 import linkedinIcon from '../../assets/linkedin-original.svg';
 import githubIcon from '../../assets/github (1).svg';
 import upworkIcon from '../../assets/upwork.svg';
+import { NAV_BY_ROUTE } from '../../data/navLinks';
 
 const SOCIAL = [
   { label: 'LinkedIn', icon: linkedinIcon, url: 'https://www.linkedin.com/in/jeffmoro/' },
@@ -13,15 +15,10 @@ const SOCIAL = [
   },
 ];
 
-const QUICK_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
-];
-
 export default function Footer() {
+  const { pathname } = useLocation();
+  const quickLinks = NAV_BY_ROUTE[pathname] ?? [];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -35,7 +32,7 @@ export default function Footer() {
         <div className={styles.links}>
           <h4 className={styles.colTitle}>Quick Links</h4>
           <nav className={styles.nav}>
-            {QUICK_LINKS.map((l) => (
+            {quickLinks.map((l) => (
               <a key={l.href} href={l.href} className={styles.navLink}>
                 {l.label}
               </a>

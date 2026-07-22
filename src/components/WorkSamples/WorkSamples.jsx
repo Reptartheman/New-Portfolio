@@ -1,7 +1,5 @@
 import useInView from '../../hooks/useInView';
 import retroNomeImg from '../../assets/RetroNome.png';
-import weatherAppImg from '../../assets/WeatherApp.png';
-import feedYourHeadImg from '../../assets/feed-your-head.png';
 import styles from './WorkSamples.module.css';
 
 const PROJECTS = [
@@ -12,22 +10,7 @@ const PROJECTS = [
     url: 'https://reptartheman.github.io/RetroNome/',
     tags: ['JavaScript', 'CSS', 'HTML'],
   },
-  {
-    title: 'Weather App',
-    description:
-      'Real-time weather dashboard pulling live data from a public API.',
-    image: weatherAppImg,
-    url: '#',
-    tags: ['React', 'API', 'CSS'],
-  },
-  {
-    title: 'Feed Your Head',
-    description:
-      'A creative content platform built with a focus on bold visual design.',
-    image: feedYourHeadImg,
-    url: '#',
-    tags: ['React', 'Node.js', 'Design'],
-  },
+
 ];
 
 export default function WorkSamples() {

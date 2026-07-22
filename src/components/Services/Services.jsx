@@ -1,42 +1,37 @@
 import useInView from '../../hooks/useInView';
 import styles from './Services.module.css';
+import webDevBG from '../../assets/WEB_DEV_BG.png';
+import audioBG from '../../assets/AUDIO_BG.png';
+import lessonsBG from '../../assets/LESSONS_BG.png';
 
 const SERVICES = [
+
   {
-    icon: '🎨',
-    title: 'Web Design',
-    description:
-      'Clean, modern designs tailored to your brand. From wireframes to pixel-perfect layouts that captivate your audience.',
-  },
-  {
-    icon: '⚡',
+    backGround: webDevBG,
     title: 'Web Development',
-    description:
-      'Fast, responsive, and accessible websites built with modern frameworks and best practices.',
+    description: [
+      `Websites`,
+      `Web Applications`,
+      `E-commerce Platforms`,
+    ],
   },
   {
-    icon: '🔍',
-    title: 'SEO & Strategy',
-    description:
-      'Data-driven strategies to boost your visibility and connect with the right audience at the right time.',
+    backGround: audioBG,
+    title: 'Audio Services',
+    description: [
+      `Podcasts`,
+      `Recording Sessions`,
+      `Editing/Mixing/DJing`,
+    ],
   },
   {
-    icon: '🛠️',
-    title: 'Maintenance & Support',
-    description:
-      'Ongoing updates, performance tuning, and technical support to keep your site running flawlessly.',
-  },
-  {
-    icon: '📱',
-    title: 'Responsive Design',
-    description:
-      'Seamless experiences across every device — mobile, tablet, and desktop, every time.',
-  },
-  {
-    icon: '🎵',
-    title: 'Audio Engineering',
-    description:
-      'Professional audio mixing, mastering, and sound design to elevate your multimedia projects.',
+    backGround: lessonsBG,
+    title: 'Private Lessons',
+    description: [
+      `Instrumental Lessons`,
+      `Audio Production`,
+      `Band Coaching`,
+    ],
   },
 ];
 
@@ -52,17 +47,20 @@ export default function Services() {
         <div className={styles.header}>
           <h2 className={styles.title}>Services</h2>
           <p className={styles.subtitle}>
-            Everything you need to launch, grow, and maintain a powerful online
-            presence.
+            An array of serv<span>i</span>ces to support <span>you</span>r creat<span>i</span>ve v<span>i</span>s<span>i</span>on.
           </p>
         </div>
 
         <div className={styles.grid}>
-          {SERVICES.map((s) => (
-            <div key={s.title} className={styles.card}>
-              <span className={styles.icon}>{s.icon}</span>
-              <h3 className={styles.cardTitle}>{s.title}</h3>
-              <p className={styles.cardDesc}>{s.description}</p>
+          {SERVICES.map((service) => (
+            <div key={service.title} className={styles.card}>
+              <h3 className={styles.cardTitle}>{service.title}</h3>
+              <img className={styles.bg} src={service.backGround} alt={service.title} />
+              <ul className={styles.cardDesc}>
+                {service.description.map((desc, index) => (
+                  <li key={index}>{desc}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
